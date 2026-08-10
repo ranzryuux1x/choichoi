@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Code Sandbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>AI Code Sandbox</h1>
+      <span>HTML • CSS • JavaScript</span>
+    </div>
+    <div class="actions">
+      <button id="runBtn">▶ Run</button>
+      <button id="clearBtn" class="secondary">Clear</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="ai-panel">
+      <div class="ai-title">AI Assistant</div>
+      <div class="ai-row">
+        <textarea id="prompt" placeholder="Contoh: Buat landing page anime dark dengan animasi neon..."></textarea>
+        <button id="askBtn">Generate</button>
+      </div>
+      <div id="status"></div>
+    </section>
+
+    <section class="workspace">
+      <div class="editors">
+        <div class="editor">
+          <div class="editor-head">HTML</div>
+          <textarea id="htmlCode" spellcheck="false"><div class="app">
+  <h2>Hello Sandbox</h2>
+  <p>Edit kode lalu tekan Run.</p>
+</div></textarea>
+        </div>
+
+        <div class="editor">
+          <div class="editor-head">CSS</div>
+          <textarea id="cssCode" spellcheck="false">body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  padding: 30px;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}</textarea>
+        </div>
+
+        <div class="editor">
+          <div class="editor-head">JavaScript</div>
+          <textarea id="jsCode" spellcheck="false">console.log("Sandbox ready!");</textarea>
+        </div>
+      </div>
+
+      <div class="preview">
+        <div class="preview-head">Preview</div>
+        <iframe id="preview" sandbox="allow-scripts"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

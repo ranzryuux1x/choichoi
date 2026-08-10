@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #eee;
+  font-family: Inter, Arial, sans-serif;
+}
+
+header {
+  min-height: 70px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+  background: #0d0d0d;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header span {
+  color: #777;
+  font-size: 12px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .85;
+}
+
+button.secondary {
+  background: #222;
+  color: #ddd;
+  margin-left: 6px;
+}
+
+main {
+  padding: 16px;
+}
+
+.ai-panel {
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 14px;
+  background: #0e0e0e;
+  margin-bottom: 16px;
+}
+
+.ai-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ai-row {
+  display: flex;
+  gap: 10px;
+}
+
+#prompt {
+  flex: 1;
+  min-height: 70px;
+  resize: vertical;
+  background: #070707;
+  color: #eee;
+  border: 1px solid #292929;
+  border-radius: 8px;
+  padding: 12px;
+  outline: none;
+}
+
+#status {
+  color: #888;
+  font-size: 12px;
+  margin-top: 8px;
+  min-height: 16px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.editors {
+  display: grid;
+  gap: 12px;
+}
+
+.editor, .preview {
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0e0e0e;
+}
+
+.editor-head, .preview-head {
+  padding: 9px 12px;
+  background: #151515;
+  border-bottom: 1px solid #242424;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.editor textarea {
+  display: block;
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  border: 0;
+  outline: 0;
+  padding: 12px;
+  background: #090909;
+  color: #ddd;
+  font: 13px/1.5 "Courier New", monospace;
+}
+
+.preview {
+  min-height: 600px;
+}
+
+#preview {
+  width: 100%;
+  height: 600px;
+  display: block;
+  border: 0;
+  background: white;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-row {
+    flex-direction: column;
+  }
+
+  #preview {
+    height: 500px;
+  }
+}
